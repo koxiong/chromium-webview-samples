@@ -139,7 +139,8 @@ public class MainActivity extends Activity
 
             setUpWebViewDefaults(mWebRTCWebView);
 
-            mWebRTCWebView.loadUrl("https://apprtc-m.appspot.com/");
+            final String url = "https://insta.onsip.com/";
+            mWebRTCWebView.loadUrl(url);
 
             mWebRTCWebView.setWebChromeClient(new WebChromeClient() {
 
@@ -150,7 +151,7 @@ public class MainActivity extends Activity
                         @TargetApi(Build.VERSION_CODES.LOLLIPOP)
                         @Override
                         public void run() {
-                            if(request.getOrigin().toString().equals("https://apprtc-m.appspot.com/")) {
+                            if(request.getOrigin().toString().equals(url)) {
                                 request.grant(request.getResources());
                             } else {
                                 request.deny();
