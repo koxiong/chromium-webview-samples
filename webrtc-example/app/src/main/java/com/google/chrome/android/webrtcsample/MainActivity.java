@@ -147,7 +147,7 @@ public class MainActivity extends Activity
                 public void onPermissionRequest(final PermissionRequest request) {
                     Log.d(TAG, "onPermissionRequest");
                     getActivity().runOnUiThread(new Runnable() {
-                        @TargetApi(Build.VERSION_CODES.L)
+                        @TargetApi(Build.VERSION_CODES.LOLLIPOP)
                         @Override
                         public void run() {
                             if(request.getOrigin().toString().equals("https://apprtc-m.appspot.com/")) {
@@ -188,7 +188,7 @@ public class MainActivity extends Activity
          *
          * @param webView
          */
-        @TargetApi(Build.VERSION_CODES.L)
+        @TargetApi(Build.VERSION_CODES.LOLLIPOP)
         private void setUpWebViewDefaults(WebView webView) {
             WebSettings settings = webView.getSettings();
 
